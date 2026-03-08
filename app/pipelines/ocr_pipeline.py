@@ -1,0 +1,26 @@
+import numpy as np
+from PIL import Image
+
+
+def extract_text_from_image(uploaded_file):
+
+    try:
+        import easyocr
+
+        reader = easyocr.Reader(['en'], gpu=False)
+
+        image = Image.open(uploaded_file).convert("RGB")
+        image_np = np.array(image)
+
+        results = reader.readtext(image_np)
+
+        extracted_text = []
+
+        for detection in results:
+            text = detection[1]
+            extracted_text.append(text)
+
+        return " ".join(extracted_text)
+
+    except Exception as e:
+        return f"OCR Failed: {str(e)}"
