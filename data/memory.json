@@ -1,0 +1,20 @@
+[
+    {
+        "question": "Find derivative X*2",
+        "topic": "calculus",
+        "solution": "2",
+        "verified": true
+    },
+    {
+        "question": "x**2.",
+        "topic": "calculus",
+        "solution": "2.0*x**1.0",
+        "verified": true
+    },
+    {
+        "question": "x*2",
+        "topic": "calculus",
+        "solution": "2",
+        "verified": true
+    }
+]
